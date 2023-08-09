@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanz Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0b00314748.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                </ul> 
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h1>Hi, I'm <span>Raihan</span><br>From Indonesia</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---About--- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ex. Fuga eius aspernatur qui repellendus nulla deleniti, impedit sit excepturi harum reiciendis facere tempora quisquam, omnis, consectetur adipisicing elit. Rem aut voluptate similique laudantium labore quod odio ipsum maxime fuga dolores. Magnam alias nihil deserunt obcaecati, ullam culpa laudantium asperiores soluta.</p>
+
+                    <div class="tab-links">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Web/App development</li>
+                            <li><span>Mobile Developer</span><br>Building Android/iOS apps</li>
+                            <li><span>UI/UX Design</span><br>Designing Web/App interface</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>June 2023</span><br>Web development training at RevoU</li>
+                            <li><span>July 2023</span><br>Development training at MySkill</li>
+                            <li><span>July 2023</span><br>Development workshop with Flutter</li>
+                            <li><span>August 2023</span><br>design training by digicode.id</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019</span><br>Pubg Mobile Player for KB</li>
+                            <li><span>2022</span><br>Mobile Legends player for Home Away</li>
+                            <li><span>2023</span><br>Valorant player from Riot</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+        </div>        
+    </div>
+    <!-- ---Service--- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. aliquam laboriosam laborum in nulla maxime, at porro consequuntur.</p>
+                    <a href="#">Leran more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Mobile Developer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. in nulla maxime eligendi illum tempora at porro consequuntur.</p>
+                    <a href="#">Leran more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum suscipit, ullam consectetur, maxime at porro consequuntur.</p>
+                    <a href="#">Leran more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---portfolio--- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>School Website</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sit, eius, repellendus.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Andoird App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sit, eius, repellendus.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>    
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>social media design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sit, eius, repellendus.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>    
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- ---contact--- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i> raihanfatturrahman14@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 08973970896</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/raihandfx?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://discord.gg/38dbMRGS\"><i class="fa-brands fa-discord"></i></a>
+                        <a href="tiktok.com/@hnz53"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100007599795034"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" id="" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Hanz. inspired by GreatStack YT <i class="fa-solid fa-fire"></i></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript
+        var tablinks = document.querySelectorAll(".tab-links p");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        // document.getElementsByClassName("tab-links")[0].style.display = "block"; // Assuming tab-links is a class and not an ID
+    
+        function opentab(tabname) {
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+    
+            var selectedTab = document.getElementById(tabname);
+            if (selectedTab) {
+                selectedTab.classList.add("active-tab");
+            }
+    
+            var activeLink = document.querySelector(".tab-links p[onclick=\"opentab('" + tabname + "')\"]");
+            if (activeLink) {
+                activeLink.classList.add("active-link");
+            }
+        }
+    
+        // Automatically open the first tab on page load
+        window.onload = function() {
+            opentab('skills'); // Replace 'tab1' with the ID of the tab you want to open
+        };
+    </script>
+                    <!-- <script>
+                        // JavaScript
+                        var tablinks = document.querySelectorAll(".tab-links p");
+                        var tabcontents = document.getElementsByClassName("tab-contents");
+                        document.getElementsByClassName("tab-links").style.display = "block"
+                    
+                        function opentab(tabname) {
+                            for (var i = 0; i < tablinks.length; i++) {
+                                tablinks[i].classList.remove("active-link");
+                            }
+                            for (var i = 0; i < tabcontents.length; i++) {
+                                tabcontents[i].classList.remove("active-tab");
+                            }
+                    
+                            var selectedTab = document.getElementById(tabname);
+                            if (selectedTab) {
+                                selectedTab.classList.add("active-tab");
+                            }
+                    
+                            var activeLink = document.querySelector(".tab-links p[onclick=\"opentab('" + tabname + "')\"]");
+                            if (activeLink) {
+                                activeLink.classList.add("active-link");
+                            }
+                        }
+                    </script> -->
+                    <script>
+
+                        var sidemenu = document.getElementById("sidemenu");
+
+                        function openmenu(){
+                            sidemenu.style.right = "0"
+                        }
+                        function closemenu(){
+                            sidemenu.style.right = "-200px"
+                        }
+
+                    </script>
+
+</body>
+</html>
