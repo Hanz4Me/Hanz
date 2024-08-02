@@ -6,9 +6,11 @@
     <title>Hanz Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0b00314748.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <div id="header">
+    <div id="header" data-aos="fade-down" data-aos-duration="1000">
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
@@ -22,27 +24,33 @@
                 </ul> 
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
+        <div class="content">
             <div class="header-text">
                 <p>Frontend Developer</p>
-                <h1>Hi, I'm <span>Raihan</span><br>From Indonesia</h1>
+                <h1 class="typewriter">Hi, I'm <span>Raihan</span><br>From Indonesia</h1>
+            </div>
+            <div class="animation">
+                <img src="images/Animation.gif" alt="">
+                
             </div>
         </div>
+    </div>
     </div>
     <!-- ---About--- -->
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
+                <div class="about-col-1" data-aos="fade-up" data-aos-duration="1000">
                     <img src="images/user.png">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ex. Fuga eius aspernatur qui repellendus nulla deleniti, impedit sit excepturi harum reiciendis facere tempora quisquam, omnis, consectetur adipisicing elit. Rem aut voluptate similique laudantium labore quod odio ipsum maxime fuga dolores. Magnam alias nihil deserunt obcaecati, ullam culpa laudantium asperiores soluta.</p>
-
+                    <h1 class="sub-title" data-aos="fade-up" data-aos-duration="1000">About Me</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ex. Fuga eius aspernatur qui repellendus nulla deleniti, impedit sit excepturi harum reiciendis facere tempora quisquam, omnis, consectetur adipisicing elit. Rem aut voluptate similique laudantium labore quod odio ipsum maxime fuga dolores. Magnam alias nihil deserunt obcaecati, ullam culpa laudantium asperiores soluta.</p>
+                <div data-aos="fade-right" data-aos-duration="1000">
                     <div class="tab-links">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')" data-aos="fade-up" data-aos-duration="1000">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')" data-aos="fade-up" data-aos-duration="1000">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')" data-aos="fade-up" data-aos-duration="1000">Education</p>
                     </div>
                     
                     <div class="tab-contents" id="skills">
@@ -64,17 +72,18 @@
                     
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2019</span><br>Pubg Mobile Player for KB</li>
+                            <li><span>2019</span><br>Pubg Mobile Player For KillerBee</li>
                             <li><span>2022</span><br>Mobile Legends player for Home Away</li>
-                            <li><span>2023</span><br>Valorant player from Riot</li>
+                            <li><span>2023</span><br>Valorant player for Indo</li>
                         </ul>
                     </div>
+                </div>
                 </div>
             </div>    
         </div>        
     </div>
     <!-- ---Service--- -->
-    <div id="services">
+    <div id="services" data-aos="fade-left" data-aos-duration="1000">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
             <div class="services-list">
@@ -82,25 +91,25 @@
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Developer</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. aliquam laboriosam laborum in nulla maxime, at porro consequuntur.</p>
-                    <a href="#">Leran more</a>
+                    <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
                     <h2>Mobile Developer</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. in nulla maxime eligendi illum tempora at porro consequuntur.</p>
-                    <a href="#">Leran more</a>
+                    <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store-ios"></i>
                     <h2>UI/UX Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum suscipit, ullam consectetur, maxime at porro consequuntur.</p>
-                    <a href="#">Leran more</a>
+                    <a href="#">Learn more</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- ---portfolio--- -->
-    <div id="portfolio">
+    <div id="portfolio" data-aos="fade-right" data-aos-duration="1000">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
@@ -133,7 +142,7 @@
         </div>
     </div>
     <!-- ---contact--- -->
-    <div id="contact">
+    <div id="contact" data-aos="fade-left" data-aos-duration="1000">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -163,73 +172,10 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
     <script>
-        // JavaScript
-        var tablinks = document.querySelectorAll(".tab-links p");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        // document.getElementsByClassName("tab-links")[0].style.display = "block"; // Assuming tab-links is a class and not an ID
-    
-        function opentab(tabname) {
-            for (var i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active-link");
-            }
-            for (var i = 0; i < tabcontents.length; i++) {
-                tabcontents[i].classList.remove("active-tab");
-            }
-    
-            var selectedTab = document.getElementById(tabname);
-            if (selectedTab) {
-                selectedTab.classList.add("active-tab");
-            }
-    
-            var activeLink = document.querySelector(".tab-links p[onclick=\"opentab('" + tabname + "')\"]");
-            if (activeLink) {
-                activeLink.classList.add("active-link");
-            }
-        }
-    
-        // Automatically open the first tab on page load
-        window.onload = function() {
-            opentab('skills'); // Replace 'tab1' with the ID of the tab you want to open
-        };
-    </script>
-                    <!-- <script>
-                        // JavaScript
-                        var tablinks = document.querySelectorAll(".tab-links p");
-                        var tabcontents = document.getElementsByClassName("tab-contents");
-                        document.getElementsByClassName("tab-links").style.display = "block"
-                    
-                        function opentab(tabname) {
-                            for (var i = 0; i < tablinks.length; i++) {
-                                tablinks[i].classList.remove("active-link");
-                            }
-                            for (var i = 0; i < tabcontents.length; i++) {
-                                tabcontents[i].classList.remove("active-tab");
-                            }
-                    
-                            var selectedTab = document.getElementById(tabname);
-                            if (selectedTab) {
-                                selectedTab.classList.add("active-tab");
-                            }
-                    
-                            var activeLink = document.querySelector(".tab-links p[onclick=\"opentab('" + tabname + "')\"]");
-                            if (activeLink) {
-                                activeLink.classList.add("active-link");
-                            }
-                        }
-                    </script> -->
-                    <script>
-
-                        var sidemenu = document.getElementById("sidemenu");
-
-                        function openmenu(){
-                            sidemenu.style.right = "0"
-                        }
-                        function closemenu(){
-                            sidemenu.style.right = "-200px"
-                        }
-
-                    </script>
+        AOS.init();
+       </script> 
 
 </body>
 </html>

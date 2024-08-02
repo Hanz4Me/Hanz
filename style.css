@@ -18,13 +18,28 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.png);
+    /* background-image: url(images/background.png); */
     background-size: cover;
     background-position: center;
 }
 
 .container {
     padding: 10px 10%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 500px;
+}
+
+.animation img {
+    height: 400px;
+    width: 400px;
+    margin-right: 25px;
+    border-radius: 15px;
 }
 
 nav {
@@ -51,6 +66,11 @@ nav ul li a {
     position: relative;
 }
 
+nav ul li a:hover {
+    color: #39deed;
+    transition: .5s;
+}
+
 nav ul li a::after {
     content: '';
     width: 0;
@@ -67,14 +87,66 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    margin-top: 20%;
     font-size: 30px;
+}
+
+/* Style the typewriter container */
+.typewriter {
+    width: 100%;
+    max-width: 470px;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  /* Typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Blinking caret animation */
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+  
+  /* Customize the paragraph within the typewriter */
+  .typewriter p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+.header-text p {
+    animation: colorBlink 1.7s infinite;
+}
+
+@keyframes colorBlink {
+    0%, 100% {
+        color: white;
+    }
+    50% {
+        color: #39deed;
+    }
 }
 
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
+
 
 .header-text h1 span {
     color: #39deed;
@@ -391,13 +463,23 @@ nav .fa-solid {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url(images/phone-background.png);
+        /* background-image: url(images/phone-background.png); */
     }
     .header-text {
-        margin-top: 430px;
+        margin-top: 60px;
         font-size: 18px;
         -webkit-text-stroke: #000000 0.7px;        
     }
+
+    .content{
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .content img {
+        width: 300px;
+    }
+
     .header-text h1 {
         font-size: 30px;
     }
